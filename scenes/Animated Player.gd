@@ -14,15 +14,17 @@ func get_input():
 	velocity.x = 0
 	if is_on_floor() and Input.is_action_just_pressed('ui_up'):
 		velocity.y = jump_speed
+	if !is_on_floor():
 		animation = 'Loncat'
-		print(animation)
-	elif Input.is_action_pressed('ui_right'):
+	if Input.is_action_pressed('ui_right'):
 		velocity.x += speed
-		animation = "Jalan"
+		if is_on_floor():
+			animation = "Jalan"
 		arah = 'kanan'
-	elif Input.is_action_pressed('ui_left'):
+	if Input.is_action_pressed('ui_left'):
 		velocity.x -= speed
-		animation = 'Jalan'
+		if is_on_floor():
+			animation = 'Jalan'
 		arah = 'kiri'
 
 	if $AnimatedSprite.animation != animation:

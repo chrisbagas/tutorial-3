@@ -51,7 +51,7 @@ animations = [ {
 "speed": 3.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
-"loop": true,
+"loop": false,
 "name": "Loncat",
 "speed": 4.0
 } ]
